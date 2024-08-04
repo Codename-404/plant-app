@@ -11,10 +11,10 @@ export default function Header({ isCart }) {
       className="w-full h-14 bg-emerald-500 
     grid grid-cols-3 items-center px-4 fixed top-0"
     >
-      <div className="w-fit h-fit flex flex-col">
+      <Link to={"/"} className="w-fit h-fit flex flex-col">
         <h2 className="font-bold">Green lab</h2>
         <p>Where green grows everyday</p>
-      </div>
+      </Link>
 
       <h2 className="text-xl font-bold w-full text-center">Plants</h2>
 
