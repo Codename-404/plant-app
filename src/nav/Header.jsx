@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
 import { useAppContext } from "../context/AppContext";
 
-export default function Header() {
+export default function Header({ isCart }) {
   const { cart } = useAppContext();
 
   return (
@@ -18,7 +18,10 @@ export default function Header() {
 
       <h2 className="text-xl font-bold w-full text-center">Plants</h2>
 
-      <Link to={"/cart"} className="w-full flex justify-end">
+      <Link
+        to={isCart ? "/browse" : "/cart"}
+        className="w-full flex justify-end"
+      >
         <div className="w-max h-max relative pointer-events-none">
           <FaCartShopping className="text-5xl" />
           <p className="absolute text-white top-1 right-4">

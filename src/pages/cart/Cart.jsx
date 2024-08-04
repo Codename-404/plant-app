@@ -8,7 +8,7 @@ export default function Cart() {
 
   return (
     <div className="w-full h-screen flex flex-col justify-end">
-      <Header />
+      <Header isCart />
 
       <div
         className="w-full pageContainerHeight overflow-y-auto overflow-x-hidden py-10
