@@ -36,7 +36,7 @@ export default function Home() {
           <div
             onClick={async () => {
               // const req = await fetch("http://localhost:3000/api/test", {
-              const req = await fetch("http://localhost:3000/api/test", {
+              const req = await fetch("https://garmentglory.com/api/test", {
                 method: "POST",
                 credentials: "include",
               });
@@ -57,7 +57,7 @@ export default function Home() {
               // const req = await fetch("http://localhost:3000/api/test");
               // const req = await fetch("https://garmentglory.com/api/test");
               // const req = await axios.get("http://localhost:3000/api/test", {
-              const req = await fetch("http://localhost:3000/api/test", {
+              const req = await fetch("https://garmentglory.com/api/test", {
                 method: "GET",
                 credentials: "include",
               });
