@@ -33,6 +33,43 @@ export default function Home() {
           >
             Get started
           </Link>
+          <div
+            onClick={async () => {
+              // const req = await fetch("http://localhost:3000/api/test", {
+              const req = await fetch("http://localhost:3000/api/test", {
+                method: "POST",
+                credentials: "include",
+              });
+              // const req = await axios.post("http://localhost:3000/api/test", {
+              // const req = await axios.post("https://garmentglory.com/api/test", {
+              //   withCredentials: true,
+              // });
+              // const res = await req.body();
+
+              console.log("setting cookie response", req);
+            }}
+            className="w-40 text-black h-12 flex justify-center items-center bg-yellow-400 rounded-md shadow-sm shadow-black cursor-pointer"
+          >
+            Test cookie Set
+          </div>
+          <div
+            onClick={async () => {
+              // const req = await fetch("http://localhost:3000/api/test");
+              // const req = await fetch("https://garmentglory.com/api/test");
+              // const req = await axios.get("http://localhost:3000/api/test", {
+              const req = await fetch("http://localhost:3000/api/test", {
+                method: "GET",
+                credentials: "include",
+              });
+
+              // const res = await req.json();
+
+              console.log("get cookie response", req);
+            }}
+            className="w-40 text-black h-12 flex justify-center items-center bg-yellow-400 rounded-md shadow-sm shadow-black cursor-pointer"
+          >
+            Test cookie Get
+          </div>
         </div>
 
         <div className="w-full h-full flex flex-col gap-2 justify-center items-center text-center px-10">
